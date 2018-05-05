@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gJg-GC-g50">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--WebVC-->
+        <scene sceneID="hE7-Zh-aMr">
+            <objects>
+                <viewController id="gJg-GC-g50" customClass="WebVC" customModule="GithubSearchApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5A3-HE-Ehh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TRB-5l-Hd3">
+                                <rect key="frame" x="0.0" y="94" width="375" height="684"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6xC-nJ-VUv">
+                                <rect key="frame" x="0.0" y="44" width="375" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OWF-Qy-kFE">
+                                        <rect key="frame" x="8" y="10" width="48" height="30"/>
+                                        <state key="normal" title="CLOSE"/>
+                                        <connections>
+                                            <action selector="closeTapped:" destination="gJg-GC-g50" eventType="touchUpInside" id="Zne-fm-b7z"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="タイトル" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="diE-6E-MzP">
+                                        <rect key="frame" x="146.33333333333334" y="13.666666666666664" width="81.666666666666657" height="24"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="OWF-Qy-kFE" firstAttribute="leading" secondItem="6xC-nJ-VUv" secondAttribute="leading" constant="8" id="3Z0-Gs-G8O"/>
+                                    <constraint firstItem="diE-6E-MzP" firstAttribute="centerY" secondItem="6xC-nJ-VUv" secondAttribute="centerY" id="I4h-Ls-ffS"/>
+                                    <constraint firstItem="diE-6E-MzP" firstAttribute="centerX" secondItem="6xC-nJ-VUv" secondAttribute="centerX" id="RTE-3A-RDB"/>
+                                    <constraint firstItem="OWF-Qy-kFE" firstAttribute="centerY" secondItem="6xC-nJ-VUv" secondAttribute="centerY" id="c4p-2g-Dkl"/>
+                                    <constraint firstAttribute="height" constant="50" id="ibc-Us-KRJ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6xC-nJ-VUv" firstAttribute="trailing" secondItem="GND-GJ-TlI" secondAttribute="trailing" id="1GK-FK-HZX"/>
+                            <constraint firstItem="6xC-nJ-VUv" firstAttribute="trailing" secondItem="GND-GJ-TlI" secondAttribute="trailing" id="6Ps-Wn-OiX"/>
+                            <constraint firstItem="6xC-nJ-VUv" firstAttribute="leading" secondItem="GND-GJ-TlI" secondAttribute="leading" id="7aU-qw-4cf"/>
+                            <constraint firstItem="6xC-nJ-VUv" firstAttribute="top" secondItem="GND-GJ-TlI" secondAttribute="top" id="HCI-Ow-sGv"/>
+                            <constraint firstItem="TRB-5l-Hd3" firstAttribute="top" secondItem="6xC-nJ-VUv" secondAttribute="bottom" id="NVz-O9-oXb"/>
+                            <constraint firstItem="TRB-5l-Hd3" firstAttribute="leading" secondItem="GND-GJ-TlI" secondAttribute="leading" id="XwU-t0-TaJ"/>
+                            <constraint firstItem="TRB-5l-Hd3" firstAttribute="trailing" secondItem="GND-GJ-TlI" secondAttribute="trailing" id="YMh-z5-iSi"/>
+                            <constraint firstItem="TRB-5l-Hd3" firstAttribute="bottom" secondItem="GND-GJ-TlI" secondAttribute="bottom" id="vQe-D9-qAP"/>
+                            <constraint firstItem="6xC-nJ-VUv" firstAttribute="leading" secondItem="GND-GJ-TlI" secondAttribute="leading" id="vuW-5Z-UQK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GND-GJ-TlI"/>
+                    </view>
+                    <connections>
+                        <outlet property="titleLbl" destination="diE-6E-MzP" id="WFk-bz-tb5"/>
+                        <outlet property="webView" destination="TRB-5l-Hd3" id="aKi-Be-whD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LWO-HB-VgU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-282.39999999999998" y="72.413793103448285"/>
+        </scene>
+    </scenes>
+</document>

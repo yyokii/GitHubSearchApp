@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Walkthrough View Controller-->
+        <scene sceneID="nBD-W8-4ig">
+            <objects>
+                <viewController storyboardIdentifier="walk" id="KtW-LO-20J" customClass="BWWalkthroughViewController" customModule="BWWalkthrough" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vsu-3b-om7"/>
+                        <viewControllerLayoutGuide type="bottom" id="6F8-0r-Q4s"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Rtu-EJ-JNa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9u0-m3-zM4">
+                                <rect key="frame" x="10" y="565" width="87" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <state key="normal" title="  ◀︎  ">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="prevPage" destination="KtW-LO-20J" eventType="touchUpInside" id="K4r-JF-Y3b"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wbS-iV-JNu">
+                                <rect key="frame" x="278" y="565" width="87" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <state key="normal" title="  ▶︎  ">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextPage" destination="KtW-LO-20J" eventType="touchUpInside" id="qdt-y7-qQ1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.32980523950000001" green="0.74408280770000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6F8-0r-Q4s" firstAttribute="top" secondItem="9u0-m3-zM4" secondAttribute="bottom" constant="30" id="2Ar-aF-Im7"/>
+                            <constraint firstItem="9u0-m3-zM4" firstAttribute="leading" secondItem="4yS-S2-qPW" secondAttribute="leading" constant="10" id="5Hz-hm-VHt"/>
+                            <constraint firstItem="6F8-0r-Q4s" firstAttribute="top" secondItem="wbS-iV-JNu" secondAttribute="bottom" constant="30" id="DiK-jf-8gh"/>
+                            <constraint firstItem="4yS-S2-qPW" firstAttribute="trailing" secondItem="wbS-iV-JNu" secondAttribute="trailing" constant="10" id="arS-c7-a7T"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4yS-S2-qPW"/>
+                    </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="point" keyPath="speedVariance">
+                            <point key="value" x="0.0" y="0.5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="string" keyPath="animationType" value="InOut"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="staticTags" value="1,2"/>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m20-JS-MlP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="749.60000000000002" y="-853.22338830584715"/>
+        </scene>
+        <!--Walkthrough Page View Controller-->
+        <scene sceneID="L5f-2C-S91">
+            <objects>
+                <viewController storyboardIdentifier="walk1" id="LFQ-T9-FSl" customClass="BWWalkthroughPageViewController" customModule="BWWalkthrough" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="brf-be-GST"/>
+                        <viewControllerLayoutGuide type="bottom" id="1wc-3f-vo7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cKS-gy-BE0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tutolial1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="azv-Li-M5v">
+                                <rect key="frame" x="149.5" y="214" width="76.5" height="24"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Perform builtin animation styles automatically. Just put your subviews  into the hierarchy..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggQ-y4-a34">
+                                <rect key="frame" x="-24" y="325.5" width="423" height="85"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="EE0-CA-OcX"/>
+                                    <constraint firstAttribute="width" constant="423" id="HVm-K1-2KW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.32980523950000001" green="0.74408280770000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="azv-Li-M5v" secondAttribute="centerX" id="EZ4-uG-jf8"/>
+                            <constraint firstAttribute="centerY" secondItem="ggQ-y4-a34" secondAttribute="centerY" constant="-34.5" id="KyZ-SL-2s1"/>
+                            <constraint firstAttribute="centerX" secondItem="ggQ-y4-a34" secondAttribute="centerX" id="bew-5s-DZW"/>
+                            <constraint firstItem="azv-Li-M5v" firstAttribute="top" secondItem="brf-be-GST" secondAttribute="bottom" constant="194" id="d8a-jJ-t4d"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aDW-k9-Vad"/>
+                    </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="point" keyPath="speedVariance">
+                            <point key="value" x="0.0" y="0.5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="string" keyPath="animationType" value="InOut"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="staticTags" value="1,2"/>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rga-bX-2HI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1412" y="-853"/>
+        </scene>
+        <!--Walkthrough Page View Controller-->
+        <scene sceneID="weD-xH-auL">
+            <objects>
+                <viewController storyboardIdentifier="walk2" id="IHh-MW-qOe" customClass="BWWalkthroughPageViewController" customModule="BWWalkthrough" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eK1-P5-87Q"/>
+                        <viewControllerLayoutGuide type="bottom" id="yh3-3I-gL4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4c4-dT-Hj4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tutolial2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yWB-Xs-xUs">
+                                <rect key="frame" x="149.5" y="214" width="76.5" height="24"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Perform builtin animation styles automatically. Just put your subviews  into the hierarchy..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sua-lJ-zxM">
+                                <rect key="frame" x="-24" y="325.5" width="423" height="85"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="423" id="VLa-b0-R52"/>
+                                    <constraint firstAttribute="height" constant="85" id="qVg-BV-Qg0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.32980523950000001" green="0.74408280770000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="sua-lJ-zxM" secondAttribute="centerX" id="Uvd-GA-Ujf"/>
+                            <constraint firstAttribute="centerX" secondItem="yWB-Xs-xUs" secondAttribute="centerX" id="VvS-KO-n9Y"/>
+                            <constraint firstAttribute="centerY" secondItem="sua-lJ-zxM" secondAttribute="centerY" constant="-34.5" id="kJl-eC-JpX"/>
+                            <constraint firstItem="yWB-Xs-xUs" firstAttribute="top" secondItem="eK1-P5-87Q" secondAttribute="bottom" constant="194" id="rBy-Oq-Fse"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Nz7-2V-rjv"/>
+                    </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="point" keyPath="speedVariance">
+                            <point key="value" x="0.0" y="0.5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="string" keyPath="animationType" value="InOut"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="staticTags" value="1,2"/>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oxt-9c-OHZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2070" y="-853"/>
+        </scene>
+    </scenes>
+</document>
