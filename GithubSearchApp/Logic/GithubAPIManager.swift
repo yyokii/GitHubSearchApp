@@ -11,8 +11,8 @@ import Alamofire
 import SwiftyJSON
 
 final class GithubAPIManager {
-    var clientId = "b66ee9abedea5103b809"
-    var clientSecret = "121040fa5cdcbcafc79626e181665cc5b85a66cc"
+    var clientId = ""
+    var clientSecret = ""
     var code: String!
     //var accessToken: String?
     
